@@ -1,0 +1,43 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">List of drivers</h4>
+                        <p class="card-category"> drivers with how many trips they made </p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        CIN
+                                    </th>
+                                    <th>
+                                        Lastname
+                                    </th>
+                                    <th>
+                                        Surname
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let driver of drivers">
+                                        <td *ngIf= 'driver.role=="driver"'>{{driver.id}}</td>
+                                        <td *ngIf= 'driver.role=="driver"'>{{driver.CIN}}</td>
+                                        <td *ngIf= 'driver.role=="driver"'>{{driver.name}}</td>
+                                        <td *ngIf= 'driver.role=="driver"'>{{driver.prenom}}</td>
+                                        <td *ngIf= 'driver.role=="driver"'><a (click)="show(driver).cin" class="btn btn-danger btn-round">Check</a><a (click)="delete(driver).id" class="btn btn-dark btn-round">Delete</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>

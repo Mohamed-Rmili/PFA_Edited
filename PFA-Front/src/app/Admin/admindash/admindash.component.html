@@ -1,0 +1,191 @@
+<!-- This is the driver's dashboard which will have only those two edited and a button to start a live trip , everything else is to be deleted -->
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-warning card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">content_copy</i>
+                        </div>
+                        <p class="card-category">Total number of trips</p>
+                        <h3 class="card-title">49/50
+                            <small>trips</small>
+                        </h3>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">store</i>
+                        </div>
+                        <p class="card-category">Number of drivers</p>
+                        <h3 class="card-title">XXXX</h3>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="card card-stats">
+                    <div class="card-header card-header-success card-header-icon">
+                        <div class="card-icon">
+                            <i class="material-icons">store</i>
+                        </div>
+                        <p class="card-category">Number of cars</p>
+                        <h3 class="card-title">5</h3>
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Add a vehicle</h4>
+                        <p class="card-category">Add a new vehicle to the fleet</p>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="addCar">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Vehicle ID number</label><br>
+                                        <input type="text" formControlName="vin">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Driver ID number</label><br>
+                                        <input type="text" formControlName="drid">
+                                    </div>
+                                </div>
+                            </div>
+                            <input (click)="addcar()" type="button" class="btn btn-danger pull-right" value="Add Vehicle">
+                        </form>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Add a user</h4>
+                        <p class="card-category">Add a new user to the company</p>
+                    </div>
+                    <div class="card-body">
+                        <form [formGroup]="addUser">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>ID number</label><br>
+                                        <input type="number" formControlName="cin">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Last name</label><br>
+                                        <input type="text" formControlName="lastname">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>First name</label><br>
+                                        <input type="text" formControlName="firstname">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Username</label><br>
+                                        <input type="text" formControlName="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Email</label><br>
+                                        <input type="email" formControlName="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Address</label><br>
+                                        <input type="text" formControlName="address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Password</label><br>
+                                        <input type="text" formControlName="password">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>License</label><br>
+                                        <input type="radio" id="A" name="lic" value="A" formControlName="license">
+                                        <label for="A">Category A</label><br>
+                                        <input type="radio" id="B" name="lic" value="B" formControlName="license">
+                                        <label for="B">Category B</label><br>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Image</label><br>
+                                        <input type="text" formControlName="image">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>AutoMode</label><br>
+                                        <input type="number" formControlName="automode">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Sex</label><br>
+                                        <input type="radio" id="male" name="sex" value="male" formControlName="sex">
+                                        <label for="male">Male</label><br>
+                                        <input type="radio" id="female" name="sex" value="female" formControlName="sex">
+                                        <label for="female">Female</label><br>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Date of birth</label><br>
+                                        <input type="date" formControlName="dob">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Role</label><br>
+                                        <input type="radio" id="driver" name="role" value="driver" formControlName="role">
+                                        <label for="driver">Driver</label><br>
+                                        <input type="radio" id="admin" name="role" value="admin" formControlName="role">
+                                        <label for="admin">Admin</label><br>
+                                    </div>
+                                </div>
+                            </div>
+                            <input value="Add User" (click)="adduser()" type="button" class="btn btn-danger pull-right">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">List of users</h4>
+                        <p class="card-category"> Admins and Drivers </p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        CIN
+                                    </th>
+                                    <th>
+                                        Username
+                                    </th>
+                                    <th>
+                                        Role
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let driver of drivers">
+                                        <td >{{driver.id}}</td>
+                                        <td >{{driver.CIN}}</td>
+                                        <td >{{driver.username}}</td>
+                                        <td>{{driver.role}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+  </div>

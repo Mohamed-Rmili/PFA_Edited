@@ -1,0 +1,5 @@
+{
+    "require": {
+        "irazasyed/jwt-auth-guard": "^1.0"
+    }
+}

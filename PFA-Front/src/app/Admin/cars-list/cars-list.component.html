@@ -1,0 +1,39 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">List of cars</h4>
+                        <p class="card-category"> cars and their respective drivers </p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        CIN
+                                    </th>
+                                    <th>
+                                        VIN
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let car of cars">
+                                        <td>{{car.id}}</td>
+                                        <td>{{car.CIN}}</td>
+                                        <td>{{car.VIN}}</td>
+                                        <td><a (click)="modify(driver).cin" class="btn btn-danger btn-round">Modify</a><a (click)="delete(driver).id" class="btn btn-dark btn-round">Delete</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>

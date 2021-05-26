@@ -1,0 +1,94 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="card card-profile">
+              <div class="card-avatar">
+                  <a href="javascript:void(0)">
+                      <img class="img" src="./assets/img/faces/marc.jpg" />
+                      <!-- this src will take the image in the database -->
+                  </a>
+              </div>
+              <div class="card-body">
+                  <h6 class="card-category text-gray">user.role</h6>
+                  <h4 class="card-title">user.name</h4>
+                  <p class="card-description">
+                    this section is deleted                   </p>
+                  <a href="javascript:void(0)" class="btn btn-danger btn-round">Follow</a>
+              </div>
+          </div>
+        </div>  
+        <div class="col-md-7">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title">Edit Profile</h4>
+                      <p class="card-category">Complete your profile</p>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <form [formGroup]="editProfile">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Last name</label><br>
+                                <input type="text" formControlName="Lastname">
+                              </div>
+                              <div class="form-group">
+                                <label>First name</label><br>
+                                <input type="text" formControlName="Firstname">
+                              </div>
+                              <div class="form-group">
+                                <label>Username</label><br>
+                                <input type="text" formControlName="Username">
+                              </div>
+                              <div class="form-group">
+                                <label>Email</label><br>
+                                <input type="email" formControlName="Email">
+                              </div>
+                              <div class="form-group">
+                                <label>ID number</label><br>
+                                <input type="text" formControlName="IDnumber">
+                              </div>
+                              <div class="form-group">
+                                <label>Password</label><br>
+                                <input type="text" formControlName="Password">
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="form-group">
+                                <label>Address</label><br>
+                                <input type="text" formControlName="Address">
+                              </div>
+                              <div class="form-group">
+                                <label>License</label><br>
+                                <input type="text" formControlName="License">
+                              </div>
+                              <div class="form-group">
+                                <label>Image</label><br>
+                                <input type="text" formControlName="Image">
+                              </div>
+                              <div class="form-group">
+                                <label>AutoMode</label><br>
+                                <input type="text" formControlName="Automode">
+                              </div>
+                              <div class="form-group">
+                                <label>Sex</label><br>
+                                <input type="text" formControlName="Sex">
+                              </div>
+                              <div class="form-group">
+                                <label>Date of birth</label><br>
+                                <input type="text" formControlName="DoB">
+                              </div>
+                            </div>
+                          </div>
+                          <input type="button" value="Edit" class="btn btn-danger pull-right" (click)="edit()">
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

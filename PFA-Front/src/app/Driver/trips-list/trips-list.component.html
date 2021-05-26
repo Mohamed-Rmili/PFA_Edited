@@ -1,0 +1,45 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">List of trips</h4>
+                        <p class="card-category"> Trips done by this driver </p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        ID
+                                    </th>
+                                    <th>
+                                        CIN
+                                    </th>
+                                    <th>
+                                        Start
+                                    </th>
+                                    <th>
+                                        End
+                                    </th>
+                                    <th>
+                                        VIN
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let trip of trips">
+                                        <td>{{trip.id}}</td>
+                                        <td>{{trip.CIN}}</td>
+                                        <td>{{trip.DateDebut}}</td>
+                                        <td>{{trip.DateFin}}</td>
+                                        <td>{{trip.VIN}}</td>
+                                        <td><a (click)="track()" class="btn btn-danger btn-round">Track</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
